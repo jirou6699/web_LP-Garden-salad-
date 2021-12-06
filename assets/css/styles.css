@@ -1057,18 +1057,18 @@ input[type="checkbox"]:checked + .contact-form__checkbox::after {
   }
 }
 
-.item__ttl--1 {
+.item__ttl--2 {
   font-weight: 700;
   width: 350px;
   width: 21.875rem;
 }
 
-.item__ttl--1 span {
+.item__ttl--2 span {
   color: #159741;
 }
 
 @media screen and (min-width: 768px) {
-  .item__ttl--1 {
+  .item__ttl--2 {
     width: 100%;
   }
 }
