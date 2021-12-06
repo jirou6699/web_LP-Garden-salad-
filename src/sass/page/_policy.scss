@@ -1,0 +1,75 @@
+.policy {
+	padding-top: rem(49);
+	padding-bottom: rem(64);
+	text-align: center;
+	background: $bg-black;
+	position: relative;
+	
+	@include mq("md") {
+		padding-top: rem(128);
+		padding-bottom: rem(110);
+		overflow: hidden;
+	}
+
+	&::after {
+		position: absolute;
+		content:'Garden Salad';
+		bottom: rem(-8);
+		right: rem(0);
+		font-family: $font-family-en;
+		font-size: (110 / 375) * 100vw; //リキッドサイズ
+		line-height: (88 / 375) * 100vw; //リキッドサイズ
+		letter-spacing: 0.015em;
+		text-align: right;
+		color: rgba(103, 103, 103, 0.3);
+		
+		@include mq("md") {
+			white-space: nowrap;  //折り返し解除
+			font-size: (280 / 1440) * 100vw; //リキッドサイズ
+			bottom: rem(58);
+			right: rem(-248);
+			line-height: rem(88);
+			letter-spacing: 0;
+		}
+	}
+}
+
+.policy__title {
+	color: $font-color-white;
+	font-weight: $bold;
+	font-size: rem(20);
+	letter-spacing: 0.05em;
+	line-height: rem(30);
+	margin-left: rem(15);
+	
+	@include mq("md") {
+		font-size: rem(30);
+		letter-spacing: 0.03em;
+		margin-left: 0;
+	}
+}
+
+.policy__text {
+	margin-top: rem(24);
+	line-height: rem(24);
+	letter-spacing: 0.03em;
+	color: $font-color-white;
+	
+	@include mq("md") {
+		margin-top: rem(54);
+		font-size: rem(18);
+		line-height: rem(28);
+		
+	}
+
+}
+
+.policy__margin-top {
+	content: "";
+	display: block;
+	margin-top: rem(24);
+	
+	@include mq("md") {
+		margin-top: rem(25);
+	}
+}

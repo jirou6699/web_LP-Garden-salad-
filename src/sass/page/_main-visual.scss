@@ -1,0 +1,106 @@
+.main-visual {
+	margin-top: rem(60); //header分を下へ
+	background: $bg-black;
+
+	@include mq("md") {
+		margin-top: rem(90);
+	}
+}
+
+.main-visual__box {
+	position: relative;
+}
+
+.main-visual__img {
+	display: block;
+	margin-left: auto;
+	width: (308 / 375) * 100%;
+
+	@include mq("md") {
+		width: (1080 / 1440) * 100%;
+	}
+}
+
+.main-visual__heading {
+	position: absolute;
+	top: 50.5%;
+	transform: translateY(-50%);
+	left: 5%;
+
+	@include mq("md") {
+		top: 50%;
+		left: 12.3%;
+	}
+}
+
+.main-visual__title-1,
+.main-visual__title-2 {
+	font-family: $font-family-en;
+	font-size: (36 / 375) * 100vw;
+	color: $font-color-white;
+
+	@include mq("md") {
+		font-size: (100 / 1440) * 100vw;
+	}
+
+	& span {
+		color: $bg-green;
+	}
+}
+
+.main-visual__title-1 {
+	line-height: (43 / 375) * 100vw;
+	@include mq("md") {
+		line-height: (100 / 1440) * 100vw;
+	}
+}
+
+.main-visual__title-2 {
+	line-height: (38 / 375) * 100vw;
+	@include mq("md") {
+		line-height: (100 / 1440) * 100vw;
+	}
+}
+
+.main-visual__lead {
+	margin-top: rem(19);
+
+	@include mq("md") {
+		margin-top: rem(37);
+	}
+}
+
+.main-visual__text-1,
+.main-visual__text-2 {
+	color: $font-color-white;
+	line-height: (20 / 375) * 100vw;
+	font-weight: 500;
+	font-size: (14 / 375) * 100vw;
+
+	@include mq("md") {
+		font-size: (32 / 1440) * 100vw;
+	}
+}
+
+.main-visual__text-1 {
+	padding-left: rem(5);
+	letter-spacing: 0.05em;
+
+	@include mq("md") {
+		padding-left: rem(20);
+	}
+}
+
+.main-visual__text-2 {
+	margin-top: rem(8.5);
+	background: $bg-green;
+	padding: rem(5) rem(10) rem(5) 0;
+	letter-spacing: 0.03em;
+
+	@include mq("md") {
+		margin-top: rem(6.5);
+		padding: rem(16) rem(20) rem(15) 0;
+		letter-spacing: 0.05em;
+		line-height: 1;
+	}
+}

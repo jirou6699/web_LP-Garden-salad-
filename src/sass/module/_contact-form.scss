@@ -1,0 +1,231 @@
+.contact-form {
+	border-radius: rem(12);
+}
+
+// .contact-info__inner {
+// 	max-width: rem(600);
+// 	width: 100%;
+// 	padding-right: $padding-sp;
+// 	padding-left: $padding-sp;
+// 	margin-right: auto;
+// 	margin-left: auto;
+
+// 	@include mq("md") {
+// 		max-width: rem(688) + rem(strip-unit($padding-pc)) * 2;
+// 		width: 100%;
+// 		padding-right: $padding-pc;
+// 		padding-left: $padding-pc;
+// 	}
+// }
+
+.contact-form__title {
+	font-size: rem(24);
+	font-weight: $bold;
+	padding-bottom: rem(21);
+	text-align: center;
+
+	@include mq("md") {
+		padding-bottom: rem(0);
+	}
+}
+
+.contact-form__row {
+	margin-top: rem(32);
+
+	@include mq("md") {
+		&:first-child {
+			margin-top: rem(48);
+		}
+
+		&:not(:first-child){
+			margin-top: rem(32);
+		}
+	}
+}
+
+.contact-form__label {
+	font-size: rem(16);
+
+	@include mq("md") {
+		font-size: rem(18);
+	}
+}
+
+.contact-form__required {
+	position: relative;
+	display: inline-block;
+
+	&::after {
+		position: absolute;
+		content: "必須";
+		top: 45%;
+		width: rem(40);
+		left: calc(100% + #{rem(10)});
+		transform: translateY(-50%);
+		font-size: rem(12);
+		color: #fff;
+		background: $bg-green;
+		padding: rem(4.5);
+		text-align: center;
+		border-radius: rem(6);
+		line-height: 1;
+		
+		@include mq("md") {
+			left: calc(100% + #{rem(17)});
+			width: rem(40);
+			top: 54%;
+			text-align: center;
+			padding: rem(4) rem(0);
+		}
+	}
+}
+
+.contact-form__input {
+	margin-top: rem(5.4);
+	
+	@include mq("md") {
+		margin-top: rem(2.5);
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+	box-shadow: none;
+	height: rem(56);
+	border: rem(1) solid $bg-black;
+	background: #fff;
+	padding: rem(16) rem(17);
+	appearance: none;
+	color: inherit;
+	font-size: rem(16);
+	width: 100%;
+
+	&:hover {
+		filter: drop-shadow(0px 0px 4px #159741);
+	}
+	
+	&::placeholder {
+		color: #BDBDBD;
+	}
+	
+	@include mq("md") {
+		padding: rem(13) rem(23);
+		height: rem(50);
+	}
+}
+
+textarea {
+	box-shadow: none;
+	background: #fff;
+	padding: rem(16) rem(17);
+	appearance: none;
+	border: rem(1) solid $bg-black;
+	color: inherit;
+	font-family: inherit;
+	font-size: rem(16);
+	width: 100%;
+	height: rem(160);
+	resize: none;
+
+	&:hover {
+		filter: drop-shadow(0px 0px 4px #159741);
+	}
+
+	&::placeholder {
+		color: #BDBDBD;
+	}
+	
+	@include mq("md") {
+		padding: rem(12) rem(20);
+	}
+}
+
+.contact-form__check {
+	margin-top: rem(29);
+	text-align: center;
+	
+	@include mq("md") {
+		margin-top: rem(30);
+	}
+}
+
+.contact-form__checkbox {
+	position: relative;
+	display: inline-block;
+
+	@include mq("md") {
+		font-size: rem(18);
+		padding-left: rem(48);
+		letter-spacing: 0.05em;
+	}
+
+	& a {
+		padding-left: rem(44);
+		text-decoration: underline;
+		letter-spacing: 0.05em;
+		color: $bg-green;
+		
+		@include mq("md") {
+			padding-left: rem(11.8);
+			font-size: rem(18);
+		}
+	}
+
+	&::before {
+		content: "";
+		width: rem(30);
+		height: rem(30);
+		border: 1px solid $font-color-black;
+		position: absolute;
+		left: rem(3);
+		top: 50%;
+		transform: translateY(-50%);
+		background: $font-color-white;
+
+		
+		@include mq("md") {
+			width: rem(30.4);
+			height: rem(30.4);
+			left: rem(21);
+		}
+	}
+	
+	&:hover::before {
+		filter: drop-shadow(0px 0px 4px #159741);
+	}
+	
+	&::after {
+		position: absolute;
+		z-index: 20;
+		content: "";
+		width: rem(25);
+		height: rem(25);
+		top: 50%;
+		transform: translateY(-50%);
+		left: rem(4);
+		background: transparent url(../images/checkbox.png) no-repeat center center / contain;
+		display: none;
+		
+		@include mq("md") {
+			width: rem(30);
+			height: rem(30);
+			left: rem(20);
+		}
+	}
+}
+
+input[type="checkbox"]:checked + .contact-form__checkbox {
+	&::after {
+		display: block !important;
+	}
+}
+
+.contact-form__button {
+	margin-top: rem(43);
+	text-align: center;
+
+	@include mq("md") {
+		margin-top: rem(43);
+	}
+}

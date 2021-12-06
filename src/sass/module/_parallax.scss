@@ -1,0 +1,11 @@
+//パララックスの高さ指定 https://yumegori.com/simple-parallax-method
+.parallax {
+  width: 100%;
+  height: 18vw;
+	min-height: rem(250);
+  overflow: hidden;
+	
+	@include mq("md") {
+		min-height: rem(450);
+	}
+}

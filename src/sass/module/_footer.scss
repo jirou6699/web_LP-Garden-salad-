@@ -1,0 +1,85 @@
+.footer {
+	padding: rem(34) 0 rem(9);
+	background: $bg-white;
+	
+	@include mq("md") {
+		width: rem(329);
+		margin-right: auto;
+		margin-left: auto;
+		padding: rem(50) 0 rem(9);
+	}
+}
+
+.footer__sns {
+	width: rem(230);
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content: space-between;
+	
+	@include mq("md") {
+		justify-content: space-around;
+	}
+}
+
+.footer__icon {
+	font-size: rem(50);
+
+		@include mq("md") {
+		font-size: rem(40);
+	}
+}
+
+.footer__items {
+	width: rem(283);
+	display: flex;
+	justify-content: space-between;
+	margin: rem(25) auto 0;
+
+	@include mq("md") {
+		width: 100%;
+	}
+}
+
+.footer__item {
+	& a {
+		font-family: $font-family-en;
+		position: relative;
+
+		@include mq("md") {
+			font-size: rem(18);
+			letter-spacing: 0.03em;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: rem(-5);
+			left: 0;
+			width: 100%;
+			height: rem(1);
+			background: $bg-green;
+			transition: opacity .3s;
+			opacity: 0;			
+		}
+		&:hover::before {
+			opacity: 1;
+		}
+	}
+}
+
+.footer__logo {
+	width: rem(166.48);
+	margin: rem(33) auto 0;
+}
+
+.footer__copyright {
+	margin-top: rem(29.35);
+	font-size: rem(12);
+	letter-spacing: 0.03em;
+	text-align: center;
+	
+	@include mq("md") {
+		margin-top: rem(20);
+	}
+}

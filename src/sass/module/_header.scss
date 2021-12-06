@@ -1,0 +1,85 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: rem(60);
+	background: $bg-black;
+	z-index: 10;
+
+	@include mq("md") {
+		height: rem(90);
+	}
+}
+
+.header__inner {
+	height: inherit;
+	display: flex;
+	align-items: center;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+
+  @include mq("md") {
+    padding-right: rem(71);
+    padding-left: rem(31);
+  }
+}
+
+.header__logo {
+	width: rem(55);
+	
+	@include mq("md") {
+		width: rem(117.87);
+	}
+}
+
+.header__nav {
+	margin-left: auto;
+}
+
+.header__items {
+	display: flex;
+	color: $font-color-white;
+}
+
+.header__item {
+	margin-left: rem(20);
+	@include mq("md") {
+		margin-left: rem(40);
+	}
+	
+	& a {
+		height: rem(60);
+		display: flex;
+		align-items: center;
+		font-size: rem(14);
+		font-family: $font-family-en;
+		letter-spacing: 0.03em;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: rem(25);
+			left: 0;
+			width: 100%;
+			height: rem(1);
+			background: $bg-green;
+			transition: opacity .3s;
+			opacity: 0;			
+		}
+		
+		&:hover::before {
+			opacity: 1;
+		}
+		
+		@include mq("md") {
+			font-size: rem(18);
+			height: rem(90);
+		}
+	}
+}
+

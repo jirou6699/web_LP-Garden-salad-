@@ -1,0 +1,44 @@
+.section-head {
+	text-align: center;
+}
+
+.section-head__sub-ttl {
+	font-weight: $bold;
+	font-size: rem(14);
+	color: $bg-green;
+	letter-spacing: 0.05em;
+
+	@include mq("md") {
+		font-size:rem(18);
+
+	}
+}
+
+.section-head__ttl {
+	padding: rem(2) 0 rem(10);
+	font-family: $font-family-en;
+	font-size: rem(32);
+	letter-spacing: 0.05em;
+	position: relative;
+	
+	@include mq("md") {
+		font-size: rem(48);
+		padding: rem(2) 0 rem(17);
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: rem(-1);
+		left: 50%;
+		transform: translateX(-50%);
+		width: rem(50);
+		height: rem(2);
+		background: $bg-green;
+		display: block;
+
+		@include mq("md") {
+			bottom: rem(5);
+		}
+	}
+}

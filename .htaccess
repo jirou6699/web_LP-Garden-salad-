@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "manmaru"
+AuthUserFile "/home/shundom09/mm-server.com/public_html/mm-portpholio/.htpasswd"
+require valid-user

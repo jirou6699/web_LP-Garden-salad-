@@ -1,0 +1,156 @@
+.item {
+	@include mq("md") {
+		display: flex;
+		justify-content: space-between;
+		width: rem(1080);
+		margin-right: auto;
+		margin-left: auto;
+
+		&:nth-child(odd) {
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.item__wrap {
+	padding-left: rem(9);
+	padding-bottom: rem(30);
+	position: relative;
+
+	@include mq("md") {
+		width: (563 / 1080) * 100%;
+		padding-left: 0;
+	}
+
+	&::after { //背景数字 共通css
+		position: absolute;
+		font-size: rem(180);
+		font-family: $font-family-en;
+		color: $font-color-white;
+		bottom: rem(-68);
+		right: rem(-15);
+		z-index: -1;
+		
+		@include mq("md") {
+			letter-spacing: 0.06em;
+			font-size: rem(288);
+		}
+	}
+	
+	
+	.item:nth-child(1) & {
+		&::after {
+			content: "01";
+			@include mq("md") {				
+				bottom: rem(-68);
+				right: rem(-6);
+			}
+		}
+	}
+	
+	.item:nth-child(2) & {
+		&::after {
+			content: "02";
+			@include mq("md") {				
+				bottom: rem(-68);
+				right: rem(-6);
+				letter-spacing: 0.01em;
+			}
+		}
+	}
+	.item:nth-child(3) & {
+		&::after {
+			content: "03";
+			bottom: rem(-88);
+			@include mq("md") {				
+				bottom: rem(-68);
+				right: rem(-22);
+				letter-spacing: 0.01em;
+			}
+		}
+	}
+}
+
+.item__wrap--1 {
+	@include mq("md") {
+		padding-top: rem(63);
+	}
+}
+
+.item__wrap--2 {
+	@include mq("md") {
+		padding-top: rem(41);
+	}
+}
+
+.item__wrap--3 {
+	@include mq("md") {
+		padding-top: rem(85);
+	}
+}
+
+.item__ttl {
+	font-weight: $bold;
+	font-size: rem(24);
+	letter-spacing: 0.05em;
+
+	& span {
+		color: $bg-green;
+	}
+
+	@include mq("md") {
+		font-size: rem(30);
+	}
+}
+
+.item__ttl--1 {
+	font-weight: $bold;
+	width: rem(350);
+
+	& span {
+		color: $bg-green;
+	}
+
+	@include mq("md") {
+		width: 100%;
+	}
+}
+
+.item__text {
+	margin-top: rem(16);
+	line-height: rem(24);
+	text-align: justify;
+	letter-spacing: 0.024em;
+	// padding-bottom: rem(30);
+	font-size: rem(16);
+	font-weight: 500;
+	font-family: $font-family-base;
+	width: (367.125 / 375) * 100%;
+
+	@include mq("md") {
+		margin-top: rem(23);
+		font-size: rem(18);
+		line-height: rem(27);
+		letter-spacing: 0.03em;
+		width: (400 / 563) * 100%;
+	}
+}
+
+.item__text--1 {
+	letter-spacing: 0.08em;
+	width: (369.75 / 375) * 100%;
+
+	@include mq("md") {
+		width: (400 / 563) * 100%;
+	}
+}
+
+.item__img {
+	.item:nth-child(3) & {
+		margin-top: rem(16);
+	}
+
+	@include mq("md") {
+		width: (450 / 1080) * 100%;
+	}
+}

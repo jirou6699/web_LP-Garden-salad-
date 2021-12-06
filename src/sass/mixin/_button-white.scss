@@ -1,0 +1,42 @@
+.button-white {
+	display: inline-block;
+	width: rem(260);
+	font-weight: $bold;
+	text-align: center;
+	letter-spacing: 0.03em;
+	padding: rem(15);
+	border: 1px solid $font-color-black;
+	position: relative;
+	transition: all .3s;
+
+	@include mq("md") {
+		width: rem(300);
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		background: url(../images/link_btn.png) no-repeat center center / cover;
+		top: 50%;
+		right: rem(8);
+		transform: translateY(-50%);
+		width: rem(19);
+		height: rem(19);
+		z-index: 30;
+		transition: background-color, .3s;
+		
+		@include mq("md") {
+			right: rem(30);
+		}
+	}
+	
+	&:hover {
+		background: #333333;
+		color: #FFF;
+
+		&:after {
+			background: url(../images/link_btn-white.png) no-repeat center center / cover;
+		}
+		
+	}
+}

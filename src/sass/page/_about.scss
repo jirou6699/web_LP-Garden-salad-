@@ -1,0 +1,39 @@
+.about {
+	padding-top: rem(64);
+	padding-bottom: rem(64);
+	background: rgba(242, 242, 242, 1);
+	position: relative;
+	z-index: 1;
+	
+	@include mq("md") {
+		padding-top: rem(130);
+		padding-bottom: rem(148);
+	}
+
+
+}
+
+.about__inner {
+
+}
+
+.about__items {
+}
+
+.about__item {
+	margin-top: rem(56);
+	
+	@include mq("md") {
+		&:nth-child(1) {
+			margin-top: rem(78);
+		}
+
+		&:nth-child(2) {
+			margin-top: rem(63);
+		}
+
+		&:nth-child(3) {
+			margin-top: rem(45);
+		}
+	}
+}
